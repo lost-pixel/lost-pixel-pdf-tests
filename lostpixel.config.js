@@ -1,7 +1,4 @@
-import { CustomProjectConfig } from "lost-pixel";
-
-//@ts-ignore
-export const config: CustomProjectConfig = {
+module.exports = {
   customShots: {
     currentShotsPath: "./lost-pixel",
   },
