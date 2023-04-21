@@ -5,6 +5,6 @@ export const config: CustomProjectConfig = {
   customShots: {
     currentShotsPath: "./lost-pixel",
   },
-  lostPixelProjectId: "clde9r3rh00v3m50vlq8y0k78",
+  lostPixelProjectId: "clgqfqifx0is5k80ef9a72utq",
   apiKey: process.env.LOST_PIXEL_API_KEY,
 };
