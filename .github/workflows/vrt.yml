@@ -18,7 +18,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Install ImageMagick
-        run: sudo apt-get install imagemagick
+        run: sudo apt-get install -y imagemagick graphicsmagick
 
       - name: Create lost-pixel folder
         run: mkdir lost-pixel
