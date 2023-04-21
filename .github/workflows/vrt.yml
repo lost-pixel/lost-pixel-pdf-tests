@@ -1,0 +1,32 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Lost Pixel
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Install ImageMagick
+        run: sudo apt-get install imagemagick
+
+      - name: Create lost-pixel folder
+        run: mkdir lost-pixel
+
+      - name: Run test script
+        run: npm run test
+
+      - name: Lost Pixel
+        uses: lost-pixel/lost-pixel@v3.4.0
+        env:
+          LOST_PIXEL_API_KEY: ${{ secrets.LOST_PIXEL_API_KEY }}
